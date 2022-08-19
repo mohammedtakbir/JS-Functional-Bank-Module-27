@@ -1,0 +1,41 @@
+<!-- ? প্রাকটিস প্রব্লেম  -->
+
+<!-- ? একটা ওয়েবসাইট এ একটা input ফিল্ড থাকবে। তার সাথে একটা বাটন থাকবে double নামে। তুমি ইনপুট ফিল্ড এ যদি কোন সংখ্যা লিখো তাহলে নিচে সেই সংখ্যা ডাবল করে দেখাবে। আরেকটা বাটন থাকবে triple নামে। সেটাতে ক্লিক করলে ইনপুট ফিল্ড এ যে সংখ্যা আছে সেটা তিনগুণ হয়ে যাবে। সেই সংখ্যা নিচে দেখাবে। আর যদি ইনপুট ফিল্ড এ সংখ্যা ছাড়া কোন কথা লিখে তাহলে একটা এলার্ট (alert) দিয়ে বলবে Please enter a number। এলার্ট ক্যামনে দেয় সেটা নিয়ে বিস্তারিত অনেকদিন পরে আমরা ই দেখায় দিবো। আপাতত দেখো গুগলে সার্চ দিয়ে কিছু বের করতে পারো কিনা। -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #double-btn:active{
+            background-color: teal;
+        }
+        #tripple-btn:active{
+            background-color: rgb(78, 130, 150);
+        }
+        #input-field:focus{
+            /* outline: none; */
+            outline-color: teal;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="max-w-lg mx-auto">
+        <h1 class="text-3xl text-center mt-12 font-semibold">Practice-Problem</h1>
+        <div class="bg-teal-100 py-10 px-5 text-center mt-10 rounded-lg">
+            <input type="text" name="" id="input-field" class="p-2 pl-3 rounded-lg text-xl" placeholder="type number...">
+            <button id="double-btn" class="bg-teal-500 text-white px-4 py-2 rounded-lg mr-2 ml-3 font-medium">Double</button>
+            <button id="tripple-btn" class="bg-sky-500 text-white px-4 py-2 rounded-lg font-medium">Tripple</button>
+        </div>
+        <p class="text-center mt-10 text-5xl font-semibold text-teal-700">Result: <span id="result-field">00</span></p>
+        <script src="js/custom.js"></script>
+    </section>
+</body>
+
+</html>
