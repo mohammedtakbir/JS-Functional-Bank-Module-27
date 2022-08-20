@@ -1,17 +1,14 @@
 document.getElementById('deposit-btn').addEventListener('click', function(){
-    const newDepositAmount = inputValue('deposit-field');
-    // ! validation
+    const newDepositAmount = getAmount('deposit-field');
     if(isNaN(newDepositAmount)){
-        alert('please enter number');
+        alert('enter number');
         return;
     }
-    const previousDeposit = getElementTextValue('deposit-total');
+    const previousDepositTotal = getElement('deposit-total');
+    const totalDeposit = previousDepositTotal + newDepositAmount;
+    setElement('deposit-total', totalDeposit);
 
-    const totalDepositAmount = previousDeposit + newDepositAmount;
-    setElementTextValue('deposit-total', totalDepositAmount);
-
-    const previousBalance = getElementTextValue('balance-total');
-
+    const previousBalance = getElement('balance-total');
     const totalBalance = previousBalance + newDepositAmount;
-    setElementTextValue('balance-total', totalBalance);
+    setElement('balance-total', totalBalance);
 })

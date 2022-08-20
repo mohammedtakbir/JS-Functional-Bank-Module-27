@@ -1,10 +1,14 @@
 document.getElementById('login-btn').addEventListener('click', function(){
-    const email = loginField('email-field');
-    const password = loginField('password-field');
-    if(email === 'mohammed@takbir.com' && password === 'takbir'){
+    const email = getInput('email-field');
+    const password = getInput('password-field');
+    if(email === '' || password === ''){
+        alert('enter email and password');
+        return;
+    }
+    if(email === 'mohammed@takbir' && password === 'tkbr'){
         window.location.href = 'custom-deposit-withdraw.html';
     }
     else{
-        alert('please enter valid info');
+        alert('enter valid info')
     }
 })
